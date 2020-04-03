@@ -92,7 +92,6 @@ struct RecommendListModel: HandyJSON {
     var tracksCount: Int = 0
     var vipFreeType: Int = 0
     var coverPath: String?
-    
 }
 
 struct Properties: HandyJSON {
@@ -130,7 +129,6 @@ struct BannerData: HandyJSON {
     var targetId: Int = 0
     var thirdClickStatUrls: [Any]?
     var thirdShowStatUrls: [Any]?
-    
 }
 
 struct SquareModel: HandyJSON {
@@ -283,7 +281,6 @@ struct LiveModel: HandyJSON {
     var uid: Int = 0
 }
 
-
 struct RecommnedAdvertModel: HandyJSON {
     var shareData: AdvertShareData?
     var isShareFlag: Bool = false
@@ -319,8 +316,8 @@ struct RecommnedAdvertModel: HandyJSON {
     var subCover: String?
     var subName: String?
     var adid:Int = 0
-    
 }
+
 struct AdvertShareData: HandyJSON {
     var linkUrl: String?
     var linkTitle: String?

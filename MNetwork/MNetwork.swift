@@ -41,6 +41,16 @@ class MNetwork: NSObject {
         return headers
     }
     
+    /// 网络请求
+    ///
+    /// - Parameters:
+    ///   - url: 各个接口的url
+    ///   - methodType: 请求方式
+    ///   - parameters: 请求参数
+    ///   - isNestedData: 是否为嵌套型字典（是则使用Json，否则使用键值对）
+    ///   - useBaseUrl: 是否使用基础URL
+    ///   - successCallBack: 请求成功回调，可选
+    ///   - failureCallBack: 失败回调，可选
     static func request(url:String, methodType: HTTPMethod = .get, parameters:[String:Any] = [:], isNestedData :Bool = false, useBaseUrl:Bool = true,  successCallBack:SuccessCallBack = nil, failureCallBack: FailureCallBack = nil) {
         var fullURL = url
         if useBaseUrl {
@@ -50,32 +60,24 @@ class MNetwork: NSObject {
                 fullURL = APIURL.baseURL + url
             }
         }
-        
-        let mutableParameters = getNewParameters(parameters: parameters, url: url)
-        
-        var encoding: ParameterEncoding  = URLEncoding.default
-        if isNestedData == true  {
-            encoding = JSONEncoding.default
-        }
+        let mutableParameters = getFullParameters(parameters: parameters, url: url)
+        let encoding: ParameterEncoding = isNestedData ? JSONEncoding.default : URLEncoding.default
         
         Alamofire.request(fullURL, method: methodType, parameters: mutableParameters, encoding: encoding, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let json):
-                
                 if let dict = json as? [String:Any] {
                     if let successCallBack = successCallBack {
                         successCallBack(dict)
                     }
                 }
-                
             case .failure(let error):
                 print("错误信息：\(error)")
             }
         }
     }
     
-    private static func getNewParameters(parameters:[String:Any], url:String) -> [String:Any] {
-        
+    private static func getFullParameters(parameters:[String:Any], url:String) -> [String:Any] {
         var mutableParameters = [String: Any]()
         
         switch url {
@@ -202,17 +204,18 @@ class MNetwork: NSObject {
                 "xt": Int32(Date().timeIntervalSince1970),
                 "deviceId": UIDevice.current.identifierForVendor!.uuidString
             ]
-            //"categoryId"
             
         default:
             break
         }
-        
-        for (key,value) in parameters {
-            mutableParameters[key] = value
-        }
+        mutableParameters += parameters
         
         return mutableParameters
     }
-    
+}
+
+func += <KeyType, ValueType> ( left: inout Dictionary<KeyType, ValueType>, right: Dictionary<KeyType, ValueType>) {
+    for (k, v) in right {
+        left.updateValue(v, forKey: k)
+    }
 }
