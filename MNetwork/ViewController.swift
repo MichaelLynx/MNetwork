@@ -22,6 +22,7 @@ class ViewController: UIViewController {
             if let model = HomeRecommendModel.deserialize(from: result) {
                 print(model)
                 //序列化
+                print("\n序列化：")
                 print(model.toJSON()!)
             }
         }) { (error) in
