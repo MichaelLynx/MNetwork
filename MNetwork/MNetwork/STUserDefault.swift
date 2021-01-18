@@ -1,6 +1,6 @@
 //
-//  STUserDefault.swift
-//  MagicCube
+//  MUserDefault.swift
+//  MNetwork
 //
 //  Created by lynx on 18/1/2021.
 //  Copyright © 2021 Lynx. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class STUserDefault: NSObject {
+class MUserDefault: NSObject {
     
     private static let userDefault = UserDefaults.standard
     

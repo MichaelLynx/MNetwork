@@ -95,7 +95,6 @@
 				4852F9892436CF310012E4C3 /* MNetwork.swift */,
 				184D4F8225B583C600BB99EA /* NetWorkParameter.swift */,
 				184D4F8425B584AB00BB99EA /* MCommonValue.swift */,
-				184D4F8825B588A400BB99EA /* WeatherModel.swift */,
 				184D4F8625B5851C00BB99EA /* STUserDefault.swift */,
 			);
 			path = MNetwork;
@@ -137,6 +136,7 @@
 			children = (
 				4852F95B2436CD810012E4C3 /* AppDelegate.swift */,
 				4852F95D2436CD810012E4C3 /* ViewController.swift */,
+				184D4F8825B588A400BB99EA /* WeatherModel.swift */,
 				184D4F8A25B58F1500BB99EA /* MNetwork */,
 				4852F95F2436CD810012E4C3 /* Main.storyboard */,
 				4852F9622436CD830012E4C3 /* Assets.xcassets */,

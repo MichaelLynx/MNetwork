@@ -1,6 +1,6 @@
 //
 //  NetWorkParameter.swift
-//  MagicCube
+//  MNetwork
 //
 //  Created by lynx on 18/1/2021.
 //  Copyright © 2021 Lynx. All rights reserved.

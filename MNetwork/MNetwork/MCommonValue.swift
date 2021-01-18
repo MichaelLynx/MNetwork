@@ -13,10 +13,10 @@ class MCommonValue: NSObject {
     
     var isDebugServer: Bool {
         get {
-            return STUserDefault.bool(forKey: "isDebugServer")
+            return MUserDefault.bool(forKey: "isDebugServer")
         }
         set {
-            STUserDefault.set(newValue, forKey: "isDebugServer")
+            MUserDefault.set(newValue, forKey: "isDebugServer")
         }
     }
     
