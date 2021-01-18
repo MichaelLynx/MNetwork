@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8225B583C600BB99EA /* NetWorkParameter.swift */; };
+		184D4F8525B584AB00BB99EA /* MCommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8425B584AB00BB99EA /* MCommonValue.swift */; };
+		184D4F8725B5851C00BB99EA /* STUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8625B5851C00BB99EA /* STUserDefault.swift */; };
+		184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8825B588A400BB99EA /* WeatherModel.swift */; };
 		4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95B2436CD810012E4C3 /* AppDelegate.swift */; };
 		4852F95E2436CD810012E4C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95D2436CD810012E4C3 /* ViewController.swift */; };
 		4852F9612436CD810012E4C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4852F95F2436CD810012E4C3 /* Main.storyboard */; };
@@ -15,7 +19,6 @@
 		4852F9712436CD830012E4C3 /* MNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F9702436CD830012E4C3 /* MNetworkTests.swift */; };
 		4852F97C2436CD830012E4C3 /* MNetworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F97B2436CD830012E4C3 /* MNetworkUITests.swift */; };
 		4852F98A2436CF310012E4C3 /* MNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F9892436CF310012E4C3 /* MNetwork.swift */; };
-		4852F98C2436D0FC0012E4C3 /* HomeRecommendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F98B2436D0FC0012E4C3 /* HomeRecommendModel.swift */; };
 		C9115589E9E82B324DC09551 /* Pods_MNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8DC896B3E1818D4C16AE648 /* Pods_MNetwork.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184D4F8225B583C600BB99EA /* NetWorkParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkParameter.swift; sourceTree = "<group>"; };
+		184D4F8425B584AB00BB99EA /* MCommonValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCommonValue.swift; sourceTree = "<group>"; };
+		184D4F8625B5851C00BB99EA /* STUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUserDefault.swift; sourceTree = "<group>"; };
+		184D4F8825B588A400BB99EA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		4852F9582436CD800012E4C3 /* MNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852F95B2436CD810012E4C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4852F95D2436CD810012E4C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,7 +58,6 @@
 		4852F97B2436CD830012E4C3 /* MNetworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNetworkUITests.swift; sourceTree = "<group>"; };
 		4852F97D2436CD830012E4C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4852F9892436CF310012E4C3 /* MNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNetwork.swift; sourceTree = "<group>"; };
-		4852F98B2436D0FC0012E4C3 /* HomeRecommendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendModel.swift; sourceTree = "<group>"; };
 		58089973959CD2C06DD53344 /* Pods-MNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNetwork.debug.xcconfig"; path = "Target Support Files/Pods-MNetwork/Pods-MNetwork.debug.xcconfig"; sourceTree = "<group>"; };
 		B8DC896B3E1818D4C16AE648 /* Pods_MNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABC2321C6BAF44F2F52F917 /* Pods-MNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MNetwork.release.xcconfig"; path = "Target Support Files/Pods-MNetwork/Pods-MNetwork.release.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +89,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		184D4F8A25B58F1500BB99EA /* MNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				4852F9892436CF310012E4C3 /* MNetwork.swift */,
+				184D4F8225B583C600BB99EA /* NetWorkParameter.swift */,
+				184D4F8425B584AB00BB99EA /* MCommonValue.swift */,
+				184D4F8825B588A400BB99EA /* WeatherModel.swift */,
+				184D4F8625B5851C00BB99EA /* STUserDefault.swift */,
+			);
+			path = MNetwork;
+			sourceTree = "<group>";
+		};
 		21086197472C061597BB8024 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,8 +137,7 @@
 			children = (
 				4852F95B2436CD810012E4C3 /* AppDelegate.swift */,
 				4852F95D2436CD810012E4C3 /* ViewController.swift */,
-				4852F9892436CF310012E4C3 /* MNetwork.swift */,
-				4852F98B2436D0FC0012E4C3 /* HomeRecommendModel.swift */,
+				184D4F8A25B58F1500BB99EA /* MNetwork */,
 				4852F95F2436CD810012E4C3 /* Main.storyboard */,
 				4852F9622436CD830012E4C3 /* Assets.xcassets */,
 				4852F9642436CD830012E4C3 /* LaunchScreen.storyboard */,
@@ -166,7 +183,7 @@
 				4852F9542436CD800012E4C3 /* Sources */,
 				4852F9552436CD800012E4C3 /* Frameworks */,
 				4852F9562436CD800012E4C3 /* Resources */,
-				FCAAAA15E43423D9E1F5945B /* [CP] Embed Pods Frameworks */,
+				E1E624FC7246D6FCEBDF2DAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,7 +323,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCAAAA15E43423D9E1F5945B /* [CP] Embed Pods Frameworks */ = {
+		E1E624FC7246D6FCEBDF2DAC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -330,10 +347,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184D4F8725B5851C00BB99EA /* STUserDefault.swift in Sources */,
 				4852F95E2436CD810012E4C3 /* ViewController.swift in Sources */,
 				4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */,
 				4852F98A2436CF310012E4C3 /* MNetwork.swift in Sources */,
-				4852F98C2436D0FC0012E4C3 /* HomeRecommendModel.swift in Sources */,
+				184D4F8525B584AB00BB99EA /* MCommonValue.swift in Sources */,
+				184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */,
+				184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,14 +530,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3685N6X9ZS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MNetwork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lynx02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -530,14 +550,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3685N6X9ZS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MNetwork/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lynx02;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

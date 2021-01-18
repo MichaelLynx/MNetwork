@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.9.1)
-  - HandyJSON (5.0.1)
+  - Alamofire (5.4.1)
+  - HandyJSON (5.0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -12,9 +12,9 @@ SPEC REPOS:
     - HandyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
 
-PODFILE CHECKSUM: 759a77efe88dbc84191ec4958b07a90c5825e8c7
+PODFILE CHECKSUM: 89886d4b655d118750cbfd8aff321a5e784d4450
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1

@@ -12,18 +12,26 @@ import HandyJSON
 
 typealias SuccessCallBack = ((_ result:[String: Any]) -> ())?
 typealias FailureCallBack = ((_ error: Error) -> ())?
-
+ 
 enum APIURL {
-    static var baseURL = "http://mobile.ximalaya.com"
+    static var disBaserURL = "http://www.xxx.com"
+    static var devBaseURL = "http://www.xxx.com"
+    
+    #if DEBUG
+    static var baseURL = devBaseURL
+    #else
+    static var baseURL = disBaserURL
+    #endif
     
     //path
-    static var recommendList = "/discovery-firstpage/v2/explore/ts-1532411485052"
+    ///Weather
+    static var queryWeather = "http://www.weather.com.cn/data/cityinfo/101010100.html"
     
     //static var <#content#> = "<#content#>"
 }
 
-//From alamofire.
 class MNetwork: NSObject {
+    static let lastNetWorkRequestParamers = NetWorkParameter()
     
     private static var headers: HTTPHeaders {
         let headers:HTTPHeaders = [:]
@@ -50,7 +58,7 @@ class MNetwork: NSObject {
         let mutableParameters = getFullParameters(parameters: parameters, url: url)
         let encoding: ParameterEncoding = isNestedData ? JSONEncoding.default : URLEncoding.default
         
-        Alamofire.request(fullURL, method: methodType, parameters: mutableParameters, encoding: encoding, headers: headers).responseJSON { (response) in
+        AF.request(fullURL, method: methodType, parameters: mutableParameters, encoding: encoding, headers: headers).responseJSON { (response) in
             switch response.result {
             case .success(let json):
                 if let dict = json as? [String:Any] {
@@ -69,34 +77,52 @@ class MNetwork: NSObject {
         }
     }
     
+    ///Add the default parameters.
     private static func getFullParameters(parameters:[String:Any], url:String) -> [String:Any] {
         var mutableParameters = [String: Any]()
         
-        switch url {
-        case APIURL.recommendList:
-            mutableParameters = [
-                "device":"iPhone",
-                "appid":0,
-                "categoryId":-2,
-                "channel":"ios-b1",
-                "code":"43_310000_3100",
-                "includeActivity":true,
-                "includeSpecial":true,
-                "network":"WIFI",
-                "operator":3,
-                "pullToRefresh":true,
-                "scale":3,
-                "uid":0,
-                "version":"6.5.3",
-                "xt": Int32(Date().timeIntervalSince1970),
-                "deviceId": UIDevice.current.identifierForVendor!.uuidString]
-            
-        default:
-            break
-        }
         mutableParameters += parameters
         
         return mutableParameters
+    }
+    
+    ///Request again after failed.
+    private static func recoverLastNetWorkRequest() {
+        let methodType = lastNetWorkRequestParamers.methodType
+        let url = lastNetWorkRequestParamers.url
+        let parameters = lastNetWorkRequestParamers.parameters
+        let file = lastNetWorkRequestParamers.file
+        let lineNum = lastNetWorkRequestParamers.lineNum
+        let isNestedData = lastNetWorkRequestParamers.isNestedData
+        let useBaseUrl = lastNetWorkRequestParamers.useBaseUrl
+        let successCallBack = lastNetWorkRequestParamers.successCallBack!
+        let failureCallBack = lastNetWorkRequestParamers.failureCallBack
+        
+        MNetwork.request(url: url, methodType: methodType, parameters: parameters, isNestedData: isNestedData, useBaseUrl: useBaseUrl, file: file, lineNum: lineNum, successCallBack: successCallBack, failureCallBack: failureCallBack)
+    }
+    
+    ///Assign  the value to the baseURL again when the app activates.
+    static func initBaseURL() {
+        #if DEBUG
+        if MCommonValue.shared.isDebugServer {
+            APIURL.baseURL = APIURL.devBaseURL
+        } else {
+            APIURL.baseURL = APIURL.disBaserURL
+        }
+        #endif
+    }
+    
+    static func switchBaseURL() {
+        MCommonValue.shared.isDebugServer = !MCommonValue.shared.isDebugServer
+        var message = "当前为：正式服"
+        if MCommonValue.shared.isDebugServer {
+            APIURL.baseURL = APIURL.devBaseURL
+            message = "当前为：开发服"
+        } else {
+            APIURL.baseURL = APIURL.disBaserURL
+            message = "当前为：正式服"
+        }
+        print(message)
     }
 }
 
