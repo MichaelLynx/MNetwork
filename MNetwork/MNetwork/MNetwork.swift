@@ -14,8 +14,8 @@ typealias SuccessCallBack = ((_ result:[String: Any]) -> ())?
 typealias FailureCallBack = ((_ error: Error) -> ())?
  
 enum APIURL {
-    static var disBaserURL = "http://www.xxx.com"
-    static var devBaseURL = "http://www.xxx.com"
+    static var disBaserURL = "http://www.weather.com.cn"
+    static var devBaseURL = "http://www.weather.com.cn"
     
     #if DEBUG
     static var baseURL = devBaseURL
@@ -25,7 +25,7 @@ enum APIURL {
     
     //path
     ///Weather
-    static var queryWeather = "http://www.weather.com.cn/data/cityinfo/101010100.html"
+    static var queryWeather = "/data/cityinfo/101010100.html"
     
     //static var <#content#> = "<#content#>"
 }
@@ -38,6 +38,15 @@ class MNetwork: NSObject {
         //headers["<#content#>"] = <#content#>
         
         return headers
+    }
+    
+    static var isDebugServer: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "isDebugServer")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "isDebugServer")
+        }
     }
     
     /// 网络请求
@@ -104,7 +113,7 @@ class MNetwork: NSObject {
     ///Assign  the value to the baseURL again when the app activates.
     static func initBaseURL() {
         #if DEBUG
-        if MCommonValue.shared.isDebugServer {
+        if MNetwork.isDebugServer {
             APIURL.baseURL = APIURL.devBaseURL
         } else {
             APIURL.baseURL = APIURL.disBaserURL
@@ -113,9 +122,9 @@ class MNetwork: NSObject {
     }
     
     static func switchBaseURL() {
-        MCommonValue.shared.isDebugServer = !MCommonValue.shared.isDebugServer
+        MNetwork.isDebugServer = !MNetwork.isDebugServer
         var message = "当前为：正式服"
-        if MCommonValue.shared.isDebugServer {
+        if MNetwork.isDebugServer {
             APIURL.baseURL = APIURL.devBaseURL
             message = "当前为：开发服"
         } else {

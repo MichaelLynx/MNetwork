@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8225B583C600BB99EA /* NetWorkParameter.swift */; };
-		184D4F8525B584AB00BB99EA /* MCommonValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8425B584AB00BB99EA /* MCommonValue.swift */; };
-		184D4F8725B5851C00BB99EA /* STUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8625B5851C00BB99EA /* STUserDefault.swift */; };
 		184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8825B588A400BB99EA /* WeatherModel.swift */; };
 		4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95B2436CD810012E4C3 /* AppDelegate.swift */; };
 		4852F95E2436CD810012E4C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95D2436CD810012E4C3 /* ViewController.swift */; };
@@ -41,8 +39,6 @@
 
 /* Begin PBXFileReference section */
 		184D4F8225B583C600BB99EA /* NetWorkParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkParameter.swift; sourceTree = "<group>"; };
-		184D4F8425B584AB00BB99EA /* MCommonValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCommonValue.swift; sourceTree = "<group>"; };
-		184D4F8625B5851C00BB99EA /* STUserDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STUserDefault.swift; sourceTree = "<group>"; };
 		184D4F8825B588A400BB99EA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		4852F9582436CD800012E4C3 /* MNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852F95B2436CD810012E4C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,8 +90,6 @@
 			children = (
 				4852F9892436CF310012E4C3 /* MNetwork.swift */,
 				184D4F8225B583C600BB99EA /* NetWorkParameter.swift */,
-				184D4F8425B584AB00BB99EA /* MCommonValue.swift */,
-				184D4F8625B5851C00BB99EA /* STUserDefault.swift */,
 			);
 			path = MNetwork;
 			sourceTree = "<group>";
@@ -347,11 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184D4F8725B5851C00BB99EA /* STUserDefault.swift in Sources */,
 				4852F95E2436CD810012E4C3 /* ViewController.swift in Sources */,
 				4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */,
 				4852F98A2436CF310012E4C3 /* MNetwork.swift in Sources */,
-				184D4F8525B584AB00BB99EA /* MCommonValue.swift in Sources */,
 				184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */,
 				184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */,
 			);

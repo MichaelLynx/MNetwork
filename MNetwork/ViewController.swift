@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     
     func setupData() {
-        MNetwork.request(url: APIURL.queryWeather, useBaseUrl: false, successCallBack: { (result) in
+        MNetwork.request(url: APIURL.queryWeather, successCallBack: { (result) in
             //反序列化
             if let model = WeatherModel.deserialize(from: result) {
                 print(model)
@@ -28,5 +28,10 @@ class ViewController: UIViewController {
         }) { (error) in
             print("error:\(error)")
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        MNetwork.switchBaseURL()
+        setupData()
     }
 }
