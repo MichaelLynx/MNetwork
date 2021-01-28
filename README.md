@@ -1,4 +1,6 @@
 # MNetwork
+## 简介/Description
+
 本网络请求库是对Alamofire及HandyJSON库的二次封装，包括网络请求的类`MNetwork`、网络请求失败时重新发送使用的保存网络请求信息的类`NetWorkParameter`。
 
 本网络请求库支持正式服和测试服的切换，支持网络请求失败后重新进行网络请求。
@@ -12,4 +14,22 @@ This network request library is a secondary package of Alamofire and HandyJson l
 This network request library supports the switch between the distribution server and the development server, and supports the network request to be resent after the failure of the network request.
 
 When using it, you need to add the third-party libraries ` Alamofire ` and ` HandyJSON `, and  import the MNetwork folder(MNetwork and NetWorkParameter) into the project. Then you can use the class `MNetwork` to make network requests. Interface and other data information can be modified in `MNetwork` class.
+
+
+
+## 版本更新/Version
+
+### Version 1: 2020-04-03
+
+The initial release.
+
+### Version 2: 2021-01-18
+
+The version is optimized and can now be imported and used directly without any major changes.
+
+### Version 3: 2021-01-28
+
+Simplified the code, removed the redundant files, and now you can import just two files to use the library.
+
+
 
