@@ -24,18 +24,19 @@ When using it, you need to add the third-party libraries ` Alamofire ` and ` Han
 
 ## Version/版本更新
 
-### Version 1: 2020-04-03
+### v1.0.0: 2020-04-03
 
 The initial release.
 
-### Version 2: 2021-01-18
+### v1.0.1: 2021-01-18
 
 The version is optimized and can now be imported and used directly without any major changes.
 
-### Version 3: 2021-01-28
+### v1.0.2: 2021-01-28
 
 Simplified the code, removed the redundant files, and now you can import just two files to use the library.
 
-### Version 4:2021-01-29
+### v1.0.3:2021-01-29
 
 Added an example of replacing parameter keywords with `HandyJSON`. 
+
