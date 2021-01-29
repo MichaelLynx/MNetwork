@@ -31,7 +31,7 @@ enum APIURL {
 }
 
 class MNetwork: NSObject {
-    static let lastNetWorkRequestParamers = NetWorkParameter()
+    static let lastNetWorkRequestParamers = MNetWorkParameter()
     
     private static var headers: HTTPHeaders {
         let headers:HTTPHeaders = [:]

@@ -30,5 +30,11 @@ struct WeatherInfoModel: HandyJSON {
     var weather: String?
     var img1: String?
     var img2: String?
-    var ptime: String?
+    //var ptime: String?
+    
+    //Example for replacing a key name.
+    var time: String?
+    mutating func mapping(mapper: HelpingMapper) {
+        mapper.specify(property: &time, name: "ptime")
+    }
 }

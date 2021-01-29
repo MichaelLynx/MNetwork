@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8225B583C600BB99EA /* NetWorkParameter.swift */; };
+		184D4F8325B583C600BB99EA /* MNetWorkParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8225B583C600BB99EA /* MNetWorkParameter.swift */; };
 		184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184D4F8825B588A400BB99EA /* WeatherModel.swift */; };
 		4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95B2436CD810012E4C3 /* AppDelegate.swift */; };
 		4852F95E2436CD810012E4C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4852F95D2436CD810012E4C3 /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		184D4F8225B583C600BB99EA /* NetWorkParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkParameter.swift; sourceTree = "<group>"; };
+		184D4F8225B583C600BB99EA /* MNetWorkParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNetWorkParameter.swift; sourceTree = "<group>"; };
 		184D4F8825B588A400BB99EA /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		4852F9582436CD800012E4C3 /* MNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4852F95B2436CD810012E4C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				4852F9892436CF310012E4C3 /* MNetwork.swift */,
-				184D4F8225B583C600BB99EA /* NetWorkParameter.swift */,
+				184D4F8225B583C600BB99EA /* MNetWorkParameter.swift */,
 			);
 			path = MNetwork;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 				4852F95C2436CD810012E4C3 /* AppDelegate.swift in Sources */,
 				4852F98A2436CF310012E4C3 /* MNetwork.swift in Sources */,
 				184D4F8925B588A400BB99EA /* WeatherModel.swift in Sources */,
-				184D4F8325B583C600BB99EA /* NetWorkParameter.swift in Sources */,
+				184D4F8325B583C600BB99EA /* MNetWorkParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

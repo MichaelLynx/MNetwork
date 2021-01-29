@@ -1,5 +1,5 @@
 //
-//  NetWorkParameter.swift
+//  MNetWorkParameter.swift
 //  MNetwork
 //
 //  Created by lynx on 18/1/2021.
@@ -9,8 +9,7 @@
 import UIKit
 import Alamofire
 
-class NetWorkParameter: NSObject {
-    
+class MNetWorkParameter: NSObject {
     var methodType : HTTPMethod = .post
     var url : String = ""
     var parameters : [String : Any] = [:]
@@ -20,5 +19,4 @@ class NetWorkParameter: NSObject {
     var lineNum : Int = 0
     var successCallBack : ((_ result:[String: Any]) -> ())?
     var failureCallBack : ((_ error: Error) -> ())?
-    
 }
